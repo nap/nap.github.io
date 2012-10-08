@@ -14,9 +14,14 @@
 	<script src="js/vendor/modernizr-2.6.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8">
 	function quote(json) {
-		document.getElementById('body').innerHTML = json.body;
-		document.getElementById('author').innerHTML = json.author;
-		document.getElementById('date').innerHTML = json.date;
+		if (json.body != '') {
+			document.getElementById('body').innerHTML = json.body;
+			document.getElementById('author').innerHTML = json.author;
+			document.getElementById('date').innerHTML = json.date;
+		} else {
+			document.getElementById('quote-container').innerHTML = '';
+		}
+
 	}
 	</script>
 </head>
@@ -44,7 +49,7 @@
 						<a href="mailto:#">jean.bernard.ratte@unary.ca</a>
 					</address>
 				</div>
-				<div class="span8" style="padding-top: 40px;">
+				<div id="quote-container" class="span8" style="padding-top: 40px;">
 					<blockquote id="quote" class="pull-right">
 						<p id="body"></p>
 						<small>
