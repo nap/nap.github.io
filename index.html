@@ -14,12 +14,12 @@
 	<script src="js/vendor/modernizr-2.6.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8">
 	function quote(json) {
-		if (json.body != '') {
+		if (json.body != null) {
 			document.getElementById('body').innerHTML = json.body;
 			document.getElementById('author').innerHTML = json.author;
 			document.getElementById('date').innerHTML = json.date;
 		} else {
-			document.getElementById('quote-container').innerHTML = '';
+			document.getElementById('quote-container').display = 'none';
 		}
 
 	}
