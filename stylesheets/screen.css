@@ -1,0 +1,35 @@
+
+h1 {
+	margin-top: 150px;
+}
+h1 > span {
+	display: none;
+}
+
+h1:hover > span {
+	line-height: 0px;
+	display: inline;
+	font-size: small;
+}
+
+ul {
+	margin-top: 50px;
+}
+
+li > span {
+	display: none;
+}
+
+li:hover > span {
+	line-height: 0px;
+	display: inline;
+	font-size: small;
+}
+
+div > p {
+	border-right: 3px solid #EEE; 
+}
+
+.link-pool {
+	margin-top: 30px;
+}
